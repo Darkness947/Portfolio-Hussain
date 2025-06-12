@@ -1,17 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Navbar from './components/Navbar';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Footer from './components/Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-   <div className="container text-center mt-5">
-      <h1 className="text-primary">Welcome to Hussain's Portfolio</h1>
-      <button className="btn btn-success mt-3">Get Started</button>
-    </div>
-  )
+    <>
+    <Router>
+      <div className='d-flex flex-column min-vh-100 bg-dark text-white'>
+      <Navbar />
+      <div className='container flex-grow-1 mt-4'>
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="/Projects" element={<Projects />} />
+        {/* Add more routes as needed */}
+      </Routes>
+      </div>
+      <Footer />
+      </div>
+    </Router>
+
+    </>
+    
+  );
 }
 
-export default App
+export default App;
