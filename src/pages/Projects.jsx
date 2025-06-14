@@ -1,5 +1,6 @@
 import projectsImages from '../assets/projectsImages/p1.png';
 import projectsImages2 from '../assets/projectsImages/p3.png';
+import projectsImages3 from '../assets/projectsImages/p4.png';
 import './Projects.css';
 
 function Projects() {
@@ -7,7 +8,7 @@ function Projects() {
         <div className="container mt-5 text white">
             <h1 className="text-center mb-4" style={{ color: '#0d6efd' }}>My Projects</h1>
             <div className="row">
-                
+
                 {/* Darkness Takeover */}
                 <div className="col-md-6 mb-4">
                     <div className="card bg-dark text-white h-100">
@@ -37,6 +38,20 @@ function Projects() {
                     </div>
                 </div>
 
+                {/* My-Portfolio */}
+                <div className="col-md-6 mb-4">
+                    <div className="card bg-dark text-white h-100">
+                        <img src={projectsImages3} alt='My Portfolio' className='card-img-top project-img' />
+                        <div className="card-body">
+                            <h5 className="card-title">My Portfolio</h5>
+                            <p className="card-text">
+                                This portfolio website showcases my projects, skills, certifications and experiences.
+                                Built with React + Vite, Bootstrap, and custom CSS.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {/* Add more projects as needed */}
             </div>
         </div>
     );

@@ -3,6 +3,8 @@ import Navbar from './components/Navbar';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Footer from './components/Footer';
+import Certifications from './pages/Certifications';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/Projects" element={<Projects />} />
+        <Route path="/Certifications" element={<Certifications />} />
+        <Route path="/Contact" element={<Contact />} />
         {/* Add more routes as needed */}
       </Routes>
       </div>
