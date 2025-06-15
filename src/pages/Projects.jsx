@@ -1,6 +1,6 @@
-import projectsImages from '../assets/projectsImages/p1.png';
-import projectsImages2 from '../assets/projectsImages/p3.png';
-import projectsImages3 from '../assets/projectsImages/p4.png';
+import projectsImages from '../assets/projectsImages/pros1.png';
+import projectsImages2 from '../assets/projectsImages/pros2.png';
+import projectsImages3 from '../assets/projectsImages/pros3.png';
 import './Projects.css';
 
 function Projects() {
