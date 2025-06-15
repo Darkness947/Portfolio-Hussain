@@ -23,7 +23,7 @@ function About() {
                 <div className="card-body">
                     <h4 className="card-title">Beyond Code: My Mindset</h4>
                     <p className="card-text">
-                        I believe in crafting with purpose. Whether it is designing a game world or building a data dashboard,
+                        I believe in crafting with purpose. Whether it is designing a game world or building a web application,
                         I approach every project with creativity, discipline, and heart.
                         <br /><br />
                         I am driven by values — <strong>Faith, Family, Focus</strong>. These guide my personal growth and every line of code I write.

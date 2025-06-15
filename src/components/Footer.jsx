@@ -3,7 +3,7 @@ function Footer() {
         <footer className="bg-dark text-white text-center py-3 mt-auto">
             <div className="container">
                 <p className="mb-0">
-                    &copy; {new Date().getFullYear()} Hussain Alhumaidi. All rights reserved.
+                    &copy; {new Date().getFullYear()} Hussain Alhumaidi. All Rights Reserved.
                 </p>
             </div>
             </footer>

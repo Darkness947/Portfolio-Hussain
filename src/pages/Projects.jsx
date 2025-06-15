@@ -17,7 +17,7 @@ function Projects() {
                             <h5 className="card-title">Darkness Takeover</h5>
                             <p className="card-text">
                                 A psychological horror game where players navigate a dark maze, with a monster lurking in the shadows.
-                                Launching July 2025. Game is currently in development.
+                                Launching July 2025. Game is currently in development by Unity Engine & C#.
                             </p>
                         </div>
                     </div>
