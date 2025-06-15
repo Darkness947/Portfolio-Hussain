@@ -1,10 +1,10 @@
-import cert1 from "../assets/certimgs/cars1.png";
-import cert2 from "../assets/certimgs/cars2.png";
-import cert3 from "../assets/certimgs/cars3.png";
-import cert4 from "../assets/certimgs/cars4.png";
-import cert5 from "../assets/certimgs/cars5.png";
-import cert6 from "../assets/certimgs/cars6.png";
-import cert7 from "../assets/certimgs/cars7.png";
+import cert1 from "../assets/carsimg/cars1.png";
+import cert2 from "../assets/carsimg/cars2.png";
+import cert3 from "../assets/carsimg/cars3.png";
+import cert4 from "../assets/carsimg/cars4.png";
+import cert5 from "../assets/carsimg/cars5.png";
+import cert6 from "../assets/carsimg/cars6.png";
+import cert7 from "../assets/carsimg/cars7.png";
 
 function Certifications() {
     return (
