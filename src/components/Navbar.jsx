@@ -1,27 +1,42 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleNavbar = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4">
             <div className="container-fluid">
                 <Link className="navbar-brand text-primary" to="/">Hussain Alhumaidi</Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+                <button 
+                    className="navbar-toggler" 
+                    type="button"
+                    onClick={toggleNavbar}
+                    aria-controls="navbarNav"
+                    aria-expanded={isOpen}
+                    aria-label="Toggle navigation"
+                >
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div className="collapse navbar-collapse" id="navbarNav">
+                <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`} id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/">About</Link>
+                            <Link className="nav-link" to="/" onClick={() => setIsOpen(false)}>About</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/Projects">Projects</Link>
+                            <Link className="nav-link" to="/Projects" onClick={() => setIsOpen(false)}>Projects</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/Certifications">Certifications</Link>
+                            <Link className="nav-link" to="/Certifications" onClick={() => setIsOpen(false)}>Certifications</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/Contact">Contact</Link>
+                            <Link className="nav-link" to="/Contact" onClick={() => setIsOpen(false)}>Contact</Link>
                         </li>
                     </ul>
                 </div>
@@ -29,6 +44,7 @@ function Navbar() {
         </nav>
     );
 }
+
 
 export default Navbar;
 // This code defines a Navbar component that provides navigation links to different pages of the portfolio.
