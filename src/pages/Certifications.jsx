@@ -5,6 +5,7 @@ import cert4 from "../assets/carsimg/cars4.png";
 import cert5 from "../assets/carsimg/cars5.png";
 import cert6 from "../assets/carsimg/cars6.png";
 import cert7 from "../assets/carsimg/cars7.png";
+import cert8 from "../assets/carsimg/cars8.png";
 
 function Certifications() {
     return (
@@ -102,6 +103,18 @@ function Certifications() {
                                </div>
                            </div>
                        </div>
+                       {/* Intro to Data Science */}
+                          <div className="col-md-6 mb-4">
+                            <div className="card bg-dark text-white h-100">
+                                 <img src={cert8} alt='Intro to Data Science' className='card-img-top project-img' />
+                                 <div className="card-body">
+                                      <h5 className="card-title">Intro to Data Science</h5>
+                                      <p className="card-text">
+                                         An introductory course on data science concepts, including data analysis, visualization, AI, and machine learning basics.
+                                      </p>
+                                 </div>
+                            </div>
+                            </div>
                        {/* Add more certifications as needed */}
                    </div>
                </div>
