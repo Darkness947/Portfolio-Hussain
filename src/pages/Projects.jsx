@@ -1,6 +1,7 @@
 import projectsImages from '../assets/prosimg/pros1.png';
 import projectsImages2 from '../assets/prosimg/pros2.png';
 import projectsImages3 from '../assets/prosimg/pros3.png';
+import projectsImages4 from '../assets/prosimg/pros4.png';
 import './Projects.css';
 
 function Projects() {
@@ -17,7 +18,8 @@ function Projects() {
                             <h5 className="card-title">Darkness Takeover</h5>
                             <p className="card-text">
                                 A psychological horror game where players navigate a dark maze, with a monster lurking in the shadows.
-                                Launching July 2025. Game is currently in development by Unity Engine & C#.
+                                Released 25, July 2025 on Steam. Developed by Unity Engine & C#. <a href='https://store.steampowered.com/app/3865470/Darkness_Takeover/' target="_blank" rel="noopener noreferrer" className="text-primary">View on Steam</a>
+                                <br />
                             </p>
                         </div>
                     </div>
@@ -47,6 +49,20 @@ function Projects() {
                             <p className="card-text">
                                 This portfolio website showcases my projects, skills, certifications and experiences.
                                 Built with React + Vite, Bootstrap, and custom CSS.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {/* GPA Calculator */}
+                <div className="col-md-6 mb-4">
+                    <div className="card bg-dark text-white h-100">
+                        <img src={projectsImages4} alt='GPA Calculator' className='card-img-top project-img' />
+                        <div className="card-body">
+                            <h5 className="card-title">GPA Calculator</h5>
+                            <p className="card-text">
+                                A simple GPA calculator that allows students to calculate their GPA based on their grades.
+                                Built with React, Vite, and Bootstrap. <a href="https://gpa-calc-dev.netlify.app" target="_blank" rel="noopener noreferrer" className="text-primary">View Project</a>
+                                <br />
                             </p>
                         </div>
                     </div>
