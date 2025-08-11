@@ -1,12 +1,44 @@
-# React + Vite
+🌐 Hussain's Portfolio
+Welcome to my personal portfolio repository!
+This portfolio showcases my projects, certifications, and skills as a Software Engineering student at Prince Mohammed Bin Fahad University (PMU).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🆕 Latest Update — Version 1.2
+Added new projects to the Projects section.
 
-Currently, two official plugins are available:
+Added new certifications, including:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Intro to Data Science
 
-## Expanding the ESLint configuration
+More industry-relevant credentials in programming and technology.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📂 Sections in Portfolio
+🖥️ Projects
+A showcase of my completed and ongoing projects with descriptions, screenshots, and links.
+Some highlights:
+
+PMU Schedule Maker — Full-featured academic schedule creator.
+
+Darkness Takeover — Indie psychological horror game (Steam release).
+
+GPA Calculator — Web app to calculate and track academic GPA.
+
+📜 Certifications
+My growing collection of certifications from recognized institutions like Cisco, IBM, and PMU.
+
+🛠️ Tech Stack
+Frontend: React, Vite, Bootstrap
+
+Backend: (Planned future integration)
+
+Other: Git, GitHub, Netlify deployment
+
+🌍 Live Demo
+🔗 https://hussain-portfolio-dev.netlify.app
+
+📬 Contact
+
+Email: husdfdf@gmail.com
+
+LinkedIn: https://www.linkedin.com/in/hussain-alhumaidi-6726b334a/
+
+This repository is continuously updated to reflect my latest work, skills, and certifications. Stay tuned for more updates! 🚀
