@@ -2,6 +2,7 @@ import projectsImages from '../assets/prosimg/pros1.png';
 import projectsImages2 from '../assets/prosimg/pros2.png';
 import projectsImages3 from '../assets/prosimg/pros3.png';
 import projectsImages4 from '../assets/prosimg/pros4.png';
+import projectsImages5 from '../assets/prosimg/pros5.png';
 import './Projects.css';
 
 function Projects() {
@@ -62,6 +63,19 @@ function Projects() {
                             <p className="card-text">
                                 A simple GPA calculator that allows students to calculate their GPA based on their grades.
                                 Built with React, Vite, and Bootstrap. <a href="https://gpa-calc-dev.netlify.app" target="_blank" rel="noopener noreferrer" className="text-primary">View Project</a>
+                                <br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {/* High Resolution Clock */}
+                <div className="col-md-6 mb-4">
+                    <div className="card bg-dark text-white h-100">
+                        <img src={projectsImages5} alt='High Resolution Clock' className='card-img-top project-img' />
+                        <div className="card-body">
+                            <h5 className="card-title">High Resolution Clock</h5>
+                            <p className="card-text">
+                                A high-resolution digital clock application that displays the current time with precision including micro & nano seconds developed by Java for Windows. 
                                 <br />
                             </p>
                         </div>
