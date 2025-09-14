@@ -75,7 +75,7 @@ function Projects() {
                         <div className="card-body">
                             <h5 className="card-title">High Resolution Clock</h5>
                             <p className="card-text">
-                                A high-resolution digital clock application that displays the current time with precision including micro & nano seconds developed by Java for Windows. 
+                                A high-resolution digital clock application that displays the current time with precision including micro & nano seconds developed by Java & JavaFX for Windows. 
                                 <br />
                             </p>
                         </div>
