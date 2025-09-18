@@ -5,6 +5,7 @@ import Projects from './pages/Projects';
 import Footer from './components/Footer';
 import Certifications from './pages/Certifications';
 import Contact from './pages/Contact';
+import Bot from './components/Bot';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       </Routes>
       </div>
       <Footer />
+      <Bot />
       </div>
     </Router>
 
@@ -31,3 +33,4 @@ function App() {
 }
 
 export default App;
+// This code sets up the main application structure with routing, navigation, footer, and a chatbot.
