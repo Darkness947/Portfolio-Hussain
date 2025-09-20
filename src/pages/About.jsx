@@ -12,7 +12,7 @@ function About() {
                         I have developed multiple projects including <strong>Darkness Takeover</strong> — a solo-developed psychological horror game,
                         and the <strong>PMU Schedule Maker</strong>, a full client-side tool to help students manage their time.
                         <br /><br />
-                        I am also actively learning Data Science and working on enhancing my skills in Full Stack Development.
+                        I am also working on enhancing my skills to be a Full Stack Developer.
                         My dream is to build products that blend story, technology, and impact. One line of code at a time.
                         <br /><br />
                         I believe in learning by doing, dreaming big, and staying consistent. Welcome to my world!
