@@ -42,7 +42,7 @@ const Bot = () => {
         },
         {
             id: "projects",
-            message: "Hussain has worked on projects like Darkness Takeover (a horror game) and a GPA Calculator app. Check out the Projects page for more! 📂",
+            message: "Hussain has worked on projects like Darkness Takeover (a horror game) and a GPA Calculator Web App. Check out the Projects page for more! 📂",
             trigger: "askMore",
         },
         {
