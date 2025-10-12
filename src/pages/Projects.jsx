@@ -3,6 +3,7 @@ import projectsImages2 from '../assets/prosimg/pros2.png';
 import projectsImages3 from '../assets/prosimg/pros3.png';
 import projectsImages4 from '../assets/prosimg/pros4.png';
 import projectsImages5 from '../assets/prosimg/pros5.png';
+import projectsImages6 from '../assets/prosimg/pros6.png';
 import './Projects.css';
 
 function Projects() {
@@ -76,6 +77,22 @@ function Projects() {
                             <h5 className="card-title">High Resolution Clock</h5>
                             <p className="card-text">
                                 A high-resolution digital clock application that displays the current time with precision including micro & nano seconds developed by Java & JavaFX for Windows. 
+                                <br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {/* Full-Stack MERN To-Do-List */}
+                <div className="col-md-6 mb-4">
+                    <div className="card bg-dark text-white h-100">
+                        <img src={projectsImages6} alt='To-Do-List Web App' className='card-img-top project-img' />
+                        <div className="card-body">
+                            <h5 className="card-title">To-Do-List Web App</h5>
+                            <p className="card-text">
+                                 To-Do-List Web App that allow users to create accounts, add tasks, and manage them. 
+                                 This project was my first experience with Back-End development using Node.js and Express.js, along with MongoDB for database management. 
+                                 This marks my first Full-Stack Development project using the MERN Stack.   
+                                 <a href="https://to-do-list-dev8.netlify.app" target="_blank" rel="noopener noreferrer" className="text-primary">View Project</a>
                                 <br />
                             </p>
                         </div>
