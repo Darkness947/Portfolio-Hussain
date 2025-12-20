@@ -3,7 +3,7 @@ import { motion, useInView, useMotionValue, useSpring, useTransform } from "fram
 import { useTranslation, Trans } from "react-i18next";
 import { Link } from "react-router-dom";
 import { FaReact, FaNodeJs, FaJava, FaJs, FaCode, FaGamepad, FaPaintBrush, FaRocket, FaHtml5, FaCss3Alt, FaPython, FaUnity } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiBootstrap } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiBootstrap, SiTypescript } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 
 import imgDarkness from '../assets/prosimg/pros2.png';
@@ -23,6 +23,7 @@ const techStack = [
     { icon: <FaHtml5 className="text-orange-500" />, name: "HTML" },
     { icon: <FaCss3Alt className="text-blue-500" />, name: "CSS" },
     { icon: <FaPython className="text-yellow-300" />, name: "Python" },
+    { icon: <SiTypescript className="text-blue-500" />, name: "TypeScript" },
     { icon: <FaUnity className="text-white" />, name: "Unity" },
 ];
 

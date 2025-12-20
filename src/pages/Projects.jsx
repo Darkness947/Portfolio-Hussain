@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { FaSteam, FaGithub, FaExternalLinkAlt, FaUnity, FaReact, FaJava, FaNodeJs, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
-import { SiMongodb, SiBootstrap, SiTailwindcss, SiVite, SiNextdotjs } from "react-icons/si";
+import { SiMongodb, SiBootstrap, SiTailwindcss, SiVite, SiNextdotjs, SiTypescript } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 
 import imgDarkness from '../assets/prosimg/pros2.png';
@@ -31,7 +31,7 @@ const projectsData = [
     {
         key: 'algo_visualizer',
         img: imgAlgo,
-        stack: [<FaReact className="text-cyan-400" />, <SiTailwindcss className="text-cyan-300" />, <SiNextdotjs className="text-white" />],
+        stack: [<FaReact className="text-cyan-400" />, <SiTailwindcss className="text-cyan-300" />, <SiTypescript className="text-blue-500" />],
         link: 'https://algo-visualizer-dev.netlify.app',
         type: 'web'
     },
