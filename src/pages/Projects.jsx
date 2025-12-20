@@ -1,107 +1,147 @@
-import projectsImages from '../assets/prosimg/pros1.png';
-import projectsImages2 from '../assets/prosimg/pros2.png';
-import projectsImages3 from '../assets/prosimg/pros3.png';
-import projectsImages4 from '../assets/prosimg/pros4.png';
-import projectsImages5 from '../assets/prosimg/pros5.png';
-import projectsImages6 from '../assets/prosimg/pros6.png';
-import './Projects.css';
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { FaSteam, FaGithub, FaExternalLinkAlt, FaUnity, FaReact, FaJava, FaNodeJs, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
+import { SiMongodb, SiBootstrap, SiTailwindcss, SiVite, SiNextdotjs } from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
+
+import imgDarkness from '../assets/prosimg/pros2.png';
+import imgSchedule from '../assets/prosimg/pros1.png';
+import imgPortfolio from '../assets/prosimg/portfolio-new.png';
+import imgGpa from '../assets/prosimg/pros4.png';
+import imgClock from '../assets/prosimg/pros5.png';
+import imgTodo from '../assets/prosimg/pros6.png';
+import imgAlgo from '../assets/prosimg/algo.png';
+
+const projectsData = [
+    {
+        key: 'darkness',
+        img: imgDarkness,
+        stack: [<FaUnity className="text-white" />, <TbBrandCSharp className="text-purple-600" />],
+        link: 'https://store.steampowered.com/app/3865470/Darkness_Takeover/',
+        type: 'steam',
+        pos: 'object-center'
+    },
+    {
+        key: 'schedule',
+        img: imgSchedule,
+        stack: [<FaHtml5 className="text-orange-500" />, <FaCss3Alt className="text-blue-500" />, <FaJs className="text-yellow-400" />],
+        link: 'https://github.com/Darkness947/schedule-maker',
+        type: 'web'
+    },
+    {
+        key: 'algo_visualizer',
+        img: imgAlgo,
+        stack: [<FaReact className="text-cyan-400" />, <SiTailwindcss className="text-cyan-300" />, <SiNextdotjs className="text-white" />],
+        link: 'https://algo-visualizer-dev.netlify.app',
+        type: 'web'
+    },
+    {
+        key: 'portfolio',
+        img: imgPortfolio,
+        stack: [<FaReact className="text-cyan-400" />, <SiVite className="text-purple-500" />, <SiTailwindcss className="text-cyan-300" />],
+        link: 'https://hussain-portfolio-dev.netlify.app',
+        type: 'web',
+        pos: 'object-top'
+    },
+    {
+        key: 'gpa',
+        img: imgGpa,
+        stack: [<FaReact className="text-cyan-400" />, <SiBootstrap className="text-purple-500" />],
+        link: 'https://gpa-calc-dev.netlify.app',
+        type: 'web'
+    },
+    {
+        key: 'clock',
+        img: imgClock,
+        stack: [<FaJava className="text-red-500" />],
+        link: 'https://github.com/Darkness947/pro-clock',
+        type: 'app'
+    },
+    {
+        key: 'todo',
+        img: imgTodo,
+        stack: [<SiMongodb className="text-green-500" />, <FaNodeJs className="text-green-600" />, <FaReact className="text-cyan-400" />],
+        link: 'https://to-do-list-dev8.netlify.app',
+        type: 'web'
+    }
+];
 
 function Projects() {
+    const { t } = useTranslation();
+
     return (
-        <div className="container mt-5 text white">
-            <h1 className="text-center mb-4" style={{ color: '#0d6efd' }}>My Projects</h1>
-            <div className="row">
+        <div className="min-h-screen py-10">
+            <motion.h1
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent pb-2 leading-tight"
+            >
+                {t('projects.title', 'My Projects')}
+            </motion.h1>
 
-                {/* Darkness Takeover */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={projectsImages2} alt='Darkness Takeover' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">Darkness Takeover</h5>
-                            <p className="card-text">
-                                A psychological horror game where players navigate a dark maze, with a monster lurking in the shadows.
-                                Released 25, July 2025 on Steam. Developed by Unity Engine & C#. <a href='https://store.steampowered.com/app/3865470/Darkness_Takeover/' target="_blank" rel="noopener noreferrer" className="text-primary">View on Steam</a>
-                                <br />
-                            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {projectsData.map((project, index) => (
+                    <motion.div
+                        key={project.key}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1, duration: 0.5 }}
+                        whileHover={{ y: -10, transition: { duration: 0.3, ease: "easeOut" } }}
+                        className="group bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:border-neon-purple/50 hover:shadow-[0_0_30px_rgba(188,19,254,0.2)] transition-all duration-300 flex flex-col h-full"
+                    >
+                        {/* Image Container */}
+                        <div className="relative w-full h-56 overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 group-hover:opacity-0 transition-opacity duration-300" />
+                            <img
+                                src={project.img}
+                                alt={t(`projects.${project.key}.title`)}
+                                className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${project.pos || 'object-top'}`}
+                            />
+                            {/* Overlay Badge for Type */}
+                            <div className="absolute top-3 right-3 z-20">
+                                <span className="px-3 py-1 bg-black/60 backdrop-blur-md border border-white/10 rounded-full text-xs font-bold text-white uppercase tracking-wider">
+                                    {project.type}
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                {/* PMU Schedule Maker */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={projectsImages} alt='PMU Schedule Maker' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">PMU Schedule Maker</h5>
-                            <p className="card-text">
-                                A client-side application made for Web Programming course at PMU.
-                                It allows students to create and manage their schedules efficiently.
-                                Built with HTML, CSS, and JavaScript.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                        {/* Content Container */}
+                        <div className="p-6 flex flex-col flex-grow">
+                            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-neon-blue transition-colors">
+                                {t(`projects.${project.key}.title`)}
+                            </h3>
 
-                {/* My-Portfolio */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={projectsImages3} alt='My Portfolio' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">My Portfolio</h5>
-                            <p className="card-text">
-                                This portfolio website showcases my projects, skills, certifications and experiences.
-                                Built with React + Vite, Bootstrap, and custom CSS.
+                            <p className="text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed flex-grow">
+                                {t(`projects.${project.key}.desc`)}
                             </p>
+
+                            <div className="pt-4 border-t border-white/10 mt-auto">
+                                <div className="flex items-center gap-3 mb-4 text-xl text-gray-300">
+                                    {project.stack}
+                                </div>
+
+                                {project.link ? (
+                                    <a
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full block text-center px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white font-bold text-sm tracking-wide hover:bg-neon-blue hover:text-black hover:border-transparent transition-all flex items-center justify-center gap-2 group/btn"
+                                    >
+                                        <span>{project.type === 'steam' ? t('projects.view_steam', 'View on Steam') : t('projects.view_project', 'View Project')}</span>
+                                        {project.type === 'steam' ? <FaSteam className="group-hover/btn:scale-110 transition-transform" /> : <FaExternalLinkAlt className="group-hover/btn:rotate-45 transition-transform" />}
+                                    </a>
+                                ) : (
+                                    <button disabled className="w-full block text-center px-6 py-3 bg-white/5 border border-white/5 rounded-xl text-gray-500 font-bold text-sm tracking-wide cursor-not-allowed">
+                                        Coming Soon
+                                    </button>
+                                )}
+                            </div>
                         </div>
-                    </div>
-                </div>
-                {/* GPA Calculator */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={projectsImages4} alt='GPA Calculator' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">GPA Calculator</h5>
-                            <p className="card-text">
-                                A simple GPA calculator that allows students to calculate their GPA based on their grades.
-                                Built with React, Vite, and Bootstrap. <a href="https://gpa-calc-dev.netlify.app" target="_blank" rel="noopener noreferrer" className="text-primary">View Project</a>
-                                <br />
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {/* High Resolution Clock */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={projectsImages5} alt='High Resolution Clock' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">High Resolution Clock</h5>
-                            <p className="card-text">
-                                A high-resolution digital clock application that displays the current time with precision including micro & nano seconds developed by Java & JavaFX for Windows. 
-                                <br />
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {/* Full-Stack MERN To-Do-List */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={projectsImages6} alt='To-Do-List Web App' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">To-Do-List Web App</h5>
-                            <p className="card-text">
-                                 To-Do-List Web App that allow users to create accounts, add tasks, and manage them. 
-                                 This project was my first experience with Back-End development using Node.js and Express.js, along with MongoDB for database management. 
-                                 This marks my first Full-Stack Development project using the MERN Stack.   
-                                 <a href="https://to-do-list-dev8.netlify.app" target="_blank" rel="noopener noreferrer" className="text-primary">View Project</a>
-                                <br />
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {/* Add more projects as needed */}
+                    </motion.div>
+                ))}
             </div>
         </div>
     );
 }
 export default Projects;
-// This code defines a Projects component that displays two projects: Darkness Takeover and PMU Schedule Maker.

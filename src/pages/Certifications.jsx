@@ -1,3 +1,7 @@
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { FaCertificate } from "react-icons/fa";
+
 import cert1 from "../assets/carsimg/cars1.png";
 import cert2 from "../assets/carsimg/cars2.png";
 import cert3 from "../assets/carsimg/cars3.png";
@@ -10,167 +14,75 @@ import cert9 from "../assets/carsimg/cars9.png";
 import cert10 from "../assets/carsimg/cars10.png";
 import cert11 from "../assets/carsimg/cars11.png";
 import cert12 from "../assets/carsimg/cars12.png";
+import cert13 from "../assets/carsimg/cars13.png";
+import cert14 from "../assets/carsimg/cars14.png";
+import cert15 from "../assets/carsimg/cars15.png";
 
 function Certifications() {
+    const { t } = useTranslation();
+
+    const certsData = [
+        { key: 'html', img: cert1 },
+        { key: 'css', img: cert2 },
+        { key: 'js1', img: cert3 },
+        { key: 'js2', img: cert4 },
+        { key: 'uiux', img: cert5 },
+        { key: 'java', img: cert6 },
+        { key: 'webrules', img: cert7 },
+        { key: 'datasci', img: cert8 },
+        { key: 'analytics', img: cert9 },
+        { key: 'ai', img: cert10 },
+        { key: 'cyber', img: cert11 },
+        { key: 'hardware', img: cert12 },
+        { key: 'it_essentials', img: cert13 },
+        { key: 'sdaia_ai', img: cert14 },
+        { key: 'sdaia_advanced_ai', img: cert15 },
+    ];
+
     return (
-        <div className="container mt-5 text white">
-            <h1 className="text-center mb-4" style={{ color: '#0d6efd' }}>My Certifications</h1>
-            <div className="row">
+        <div className="min-h-screen py-10">
+            <motion.h1
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent pb-2 leading-tight"
+            >
+                {t('nav.certifications', 'Certifications')}
+            </motion.h1>
 
-                {/* HTML Essentials */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={cert1} alt='HTML Essentials' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">HTML Essentials</h5>
-                            <p className="card-text">
-                                A comprehensive course covering the fundamentals of HTML, including structure, elements, and best practices.
-                            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {certsData.map((cert, index) => (
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.05 }}
+                        className="glass-card rounded-xl overflow-hidden group hover:shadow-[0_0_20px_rgba(0,243,255,0.2)] transition-all duration-300"
+                    >
+                        <div className="h-48 overflow-hidden relative">
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
+                            <img
+                                src={cert.img}
+                                alt={t(`certs.${cert.key}.title`)}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                            <div className="absolute top-2 right-2 z-20 bg-black/50 backdrop-blur-md p-2 rounded-full border border-white/10 text-neon-blue">
+                                <FaCertificate size={16} />
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                {/* CSS Essentials */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={cert2} alt='CSS Essentials' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">CSS Essentials</h5>
-                            <p className="card-text">
-                                A comprehensive course covering the fundamentals of CSS, including styling, layout, and responsive design.
+                        <div className="p-5">
+                            <h3 className="text-lg font-bold text-white mb-2 group-hover:text-neon-blue transition-colors truncate">
+                                {t(`certs.${cert.key}.title`)}
+                            </h3>
+                            <p className="text-gray-400 text-sm line-clamp-3">
+                                {t(`certs.${cert.key}.desc`)}
                             </p>
                         </div>
-                    </div>
-                </div>
-
-                {/* JavaScript Essentials 1 */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={cert3} alt='JavaScript Essentials 1' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">JavaScript Essentials 1</h5>
-                            <p className="card-text">
-                                A comprehensive course covering the fundamentals of JavaScript, including syntax, data types, and control structures.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* JavaScript Essentials 2 */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={cert4} alt='JavaScript Essentials 2' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">JavaScript Essentials 2</h5>
-                            <p className="card-text">
-                                A continuation of JavaScript Essentials 1, focusing on advanced topics like functions, objects, and asynchronous programming.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* UI/UX */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={cert5} alt='UI/UX' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">UI/UX</h5>
-                            <p className="card-text">
-                                A workshop focused on user interface and user experience design principles, covering topics like usability, accessibility, and design thinking.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Java Foundations */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={cert6} alt='Java Foundations' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">Java Foundations</h5>
-                            <p className="card-text">
-                                A foundational course in Java programming, covering basic syntax, object-oriented programming concepts, and core libraries.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Six Rules of Web Dev */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={cert7} alt='Six Rules of Web Dev' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">Six Rules of Web Dev</h5>
-                            <p className="card-text">
-                                A workshop that covers six essential principles for effective web development, including performance optimization, security, and maintainability.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {/* Intro to Data Science */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={cert8} alt='Intro to Data Science' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">Intro to Data Science</h5>
-                            <p className="card-text">
-                                An introductory course on data science concepts, including data analysis, visualization, AI, and machine learning basics.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {/* Data Analytics Essentials */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={cert9} alt='Intro to Data Science' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">Data Analytics Essentials</h5>
-                            <p className="card-text">
-                                A course that covers the fundamentals of Data Analytics, including data collection, cleaning, analysis, and visualization techniques.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {/* Intro to Modern AI */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={cert10} alt='Intro to Data Science' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">Intro to Modern AI</h5>
-                            <p className="card-text">
-                                An introductory course on modern AI concepts, including machine learning, AI Bots, and AI Benifits.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {/* Intro to Cybersecurity */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={cert11} alt='Intro to Data Science' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">Intro to Cybersecurity</h5>
-                            <p className="card-text">
-                                A course that provides an overview of cybersecurity principles, including threat detection, prevention strategies, and best practices for securing systems.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {/* Computer Hardware Basics */}
-                <div className="col-md-6 mb-4">
-                    <div className="card bg-dark text-white h-100">
-                        <img src={cert12} alt='Intro to Data Science' className='card-img-top project-img' />
-                        <div className="card-body">
-                            <h5 className="card-title">Computer Hardware Basics</h5>
-                            <p className="card-text">
-                                A course that covers the fundamentals of computer hardware, including components, assembly, and troubleshooting techniques.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {/* Add more certifications as needed */}
+                    </motion.div>
+                ))}
             </div>
         </div>
     );
 }
 export default Certifications;
-// This code defines a Certifications component that displays a list of certifications with images.

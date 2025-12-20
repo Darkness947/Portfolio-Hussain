@@ -1,9 +1,11 @@
 import './index.css'
 import App from './App.jsx'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './i18n'; // Import i18n configuration
 import React from 'react';
 import ReactDom from 'react-dom/client';
 
 ReactDom.createRoot(document.getElementById('root')).render(
-    <App />
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
 );
