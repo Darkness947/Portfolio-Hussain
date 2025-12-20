@@ -1,44 +1,65 @@
-🌐 Hussain's Portfolio
-Welcome to my personal portfolio repository!
-This portfolio showcases my projects, certifications, and skills as a Software Engineering student at Prince Mohammed Bin Fahad University (PMU).
+# 🌐 Hussain's Portfolio 2.0
 
-🆕 Latest Update — Version 1.2
-Added new projects to the Projects section.
+Welcome to my professionally designated personal portfolio!  
+This repository houses the source code for my modern, animated, and bilingual portfolio website, showcasing my journey as a Software Engineering student and Front-End Developer.
 
-Added new certifications, including:
+## 🚀 Key Features
 
-Intro to Data Science
+-   **🎨 Premium UI/UX**: Built with a "Cyberpunk/Glassmorphism" aesthetic using **Tailwind CSS**. Features neon glows, glass cards, and immersive backgrounds.
+-   **⚡ Advanced Animations**: Powered by **Framer Motion** for smooth page transitions, scroll-triggered effects, and interactive elements (3D Tilt, Anti-gravity).
+-   **🌍 Full Localization (RTL Support)**: Completely bilingual (English & Arabic) with automatic Layout mirroring (RTL) for a seamless reading experience.
+-   **🤖 AI Assistant**: Integrated smart chatbot to answer questions about my background and skills.
+-   **📱 Fully Responsive**: Optimized for all devices, from large desktops to mobile screens.
 
-More industry-relevant credentials in programming and technology.
+## 🛠️ Tech Stack
 
-📂 Sections in Portfolio
-🖥️ Projects
-A showcase of my completed and ongoing projects with descriptions, screenshots, and links.
-Some highlights:
+-   **Core**: React, Vite
+-   **Styling**: Tailwind CSS
+-   **Animations**: Framer Motion
+-   **Localization**: i18next (react-i18next)
+-   **Icons**: React Icons (FontAwesome, SimpleIcons)
 
-PMU Schedule Maker — Full-featured academic schedule creator.
+## 📂 Portfolio Sections
 
-Darkness Takeover — Indie psychological horror game (Steam release).
+### 🏠 Home
+-   **Hero Section**: Dynamic intro with typing effects.
+-   **Featured Spotlight**: 3D-tilt showcase of my top work.
+-   **Creative Process**: Animated timeline showing my workflow (Discover -> Deploy).
+-   **Tech Stack**: "Zero-gravity" floating icons.
 
-GPA Calculator — Web app to calculate and track academic GPA.
+### 🖥️ Projects
+A curated list of my best work, including:
+-   **Algorithm Visualizer** (Next.js, React, Tailwind) - *Interactive algorithm learning tool.*
+-   **Darkness Takeover** (Unity, C#) - *Psychological horror game on Steam.*
+-   **PMU Schedule Maker** (JS, CSS) - *Academic planning tool.*
 
-📜 Certifications
-My growing collection of certifications from recognized institutions like Cisco, IBM, and PMU.
+### 📜 Certifications
+Showcasing credentials from industry leaders:
+-   **SDAIA**: Fundamentals of AI & Advanced AI Concepts
+-   **Cisco**: IT Essentials 7
+-   And more...
 
-🛠️ Tech Stack
-Frontend: React, Vite, Bootstrap
+### 📬 Contact
+-   Integrated links to Email, GitHub, and LinkedIn.
+-   RTL-optimized contact cards.
 
-Backend: (Planned future integration)
+## 🏃‍♂️ Running Locally
 
-Other: Git, GitHub, Netlify deployment
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/Darkness947/Portfolio-Hussian.git
+    ```
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+3.  Start development server:
+    ```bash
+    npm run dev
+    ```
 
-🌍 Live Demo
-🔗 https://hussain-portfolio-dev.netlify.app
+## 🌍 Live Demo
+🔗 [View Live Portfolio](https://hussain-portfolio-dev.netlify.app)
 
-📬 Contact
-
-Email: husdfdf@gmail.com
-
-LinkedIn: https://www.linkedin.com/in/hussain-alhumaidi-6726b334a/
-
-This repository is continuously updated to reflect my latest work, skills, and certifications. Stay tuned for more updates! 🚀
+---
+*Created with ❤️ by Hussain Alhumaidi*
