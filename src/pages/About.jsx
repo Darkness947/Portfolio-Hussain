@@ -1,9 +1,9 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion, useInView, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useTranslation, Trans } from "react-i18next";
 import { Link } from "react-router-dom";
 import { FaReact, FaNodeJs, FaJava, FaJs, FaCode, FaGamepad, FaPaintBrush, FaRocket, FaHtml5, FaCss3Alt, FaPython, FaUnity } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiBootstrap, SiTypescript } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiBootstrap, SiTypescript, SiMongodb } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 
 import imgDarkness from '../assets/prosimg/pros2.png';
@@ -24,6 +24,7 @@ const techStack = [
     { icon: <FaCss3Alt className="text-blue-500" />, name: "CSS" },
     { icon: <FaPython className="text-yellow-300" />, name: "Python" },
     { icon: <SiTypescript className="text-blue-500" />, name: "TypeScript" },
+    { icon: <SiMongodb className="text-green-500" />, name: "MongoDB" },
     { icon: <FaUnity className="text-white" />, name: "Unity" },
 ];
 
@@ -51,6 +52,14 @@ const AnimatedCounter = ({ value, suffix = "+" }) => {
 function About() {
     const { t, i18n } = useTranslation();
     const isRTL = i18n.language === 'ar';
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     const serviceCards = [
         { icon: <FaCode />, title: "service_frontend", desc: "service_frontend_desc", color: "from-blue-500 to-cyan-400" },
@@ -69,8 +78,8 @@ function About() {
             {/* Hero Section */}
             <section className="min-h-[80vh] flex flex-col justify-center items-center text-center relative">
                 {/* Background Glow */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-neon-purple/20 blur-[100px] rounded-full pointer-events-none" />
-                <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-neon-blue/20 blur-[80px] rounded-full pointer-events-none" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-neon-purple/20 blur-[60px] md:blur-[100px] rounded-full pointer-events-none" />
+                <div className="absolute top-1/4 left-1/4 w-[200px] md:w-[300px] h-[200px] md:h-[300px] bg-neon-blue/20 blur-[50px] md:blur-[80px] rounded-full pointer-events-none" />
 
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -133,7 +142,7 @@ function About() {
                 {/* About & Mindset Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     <motion.div
-                        initial={{ opacity: 0, x: -50, rotateY: 10 }}
+                        initial={{ opacity: 0, x: -50, rotateY: isMobile ? 0 : 10 }}
                         whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.8 }}
@@ -153,7 +162,7 @@ function About() {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, x: 50, rotateY: -10 }}
+                        initial={{ opacity: 0, x: 50, rotateY: isMobile ? 0 : -10 }}
                         whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.8 }}
@@ -251,11 +260,11 @@ function About() {
                         ].map((item, idx) => (
                             <motion.div
                                 key={idx}
-                                initial={{ opacity: 0, y: 50, rotateX: 10 }}
+                                initial={{ opacity: 0, y: 50, rotateX: isMobile ? 0 : 10 }}
                                 whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.2, type: "spring", stiffness: 50 }}
-                                whileHover={{ y: -20, rotateX: 5, scale: 1.05, zIndex: 10 }}
+                                whileHover={!isMobile ? { y: -20, rotateX: 5, scale: 1.05, zIndex: 10 } : { y: -10 }}
                                 className="group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer shadow-2xl"
                             >
                                 <div className={`absolute inset-0 bg-gradient-to-t ${item.color} opacity-80 group-hover:opacity-60 transition-opacity duration-500 z-10`} />
@@ -297,12 +306,14 @@ function About() {
                             { icon: <SiTailwindcss />, top: "20%", left: "80%", size: "text-5xl", color: "text-cyan-300" },
                             { icon: <FaGamepad />, top: "60%", left: "75%", size: "text-9xl", color: "text-purple-500" },
                             { icon: <FaCode />, top: "85%", left: "40%", size: "text-4xl", color: "text-pink-500" },
-                        ].map((item, i) => (
+                        ].slice(0, isMobile ? 3 : 6).map((item, i) => (
                             <motion.div
                                 key={i}
                                 className={`absolute ${item.size} ${item.color} filter drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]`}
                                 style={{ top: item.top, left: item.left }}
-                                animate={{
+                                animate={isMobile ? {
+                                    y: [0, -15, 0]
+                                } : {
                                     y: [0, -30, 0],
                                     rotate: [0, 10, -10, 0],
                                     scale: [1, 1.1, 1]
