@@ -7,7 +7,7 @@ import { TbBrandCSharp } from "react-icons/tb";
 import imgDarkness from '../assets/prosimg/pros2.png';
 import imgSchedule from '../assets/prosimg/pros1.png';
 import imgPortfolio from '../assets/prosimg/portfolio-new.png';
-import imgGpa from '../assets/prosimg/pros4.png';
+import imgGpa from '../assets/prosimg/gpapro.png';
 import imgClock from '../assets/prosimg/pros5.png';
 import imgTodo from '../assets/prosimg/pros6.png';
 import imgAlgo from '../assets/prosimg/algo.png';
@@ -46,7 +46,7 @@ const projectsData = [
     {
         key: 'gpa',
         img: imgGpa,
-        stack: [<FaReact className="text-cyan-400" />, <SiBootstrap className="text-purple-500" />],
+        stack: [<FaReact className="text-cyan-400" />, <SiBootstrap className="text-purple-500" />, <FaCss3Alt className="text-blue-500" />],
         link: 'https://gpa-calc-dev.netlify.app',
         type: 'web'
     },
