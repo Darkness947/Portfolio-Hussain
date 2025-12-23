@@ -8,7 +8,7 @@ import imgDarkness from '../assets/prosimg/pros2.png';
 import imgSchedule from '../assets/prosimg/pros1.png';
 import imgPortfolio from '../assets/prosimg/portfolio-new.png';
 import imgGpa from '../assets/prosimg/gpapro.png';
-import imgClock from '../assets/prosimg/pros5.png';
+import imgClock from '../assets/prosimg/pro-clock.png';
 import imgTodo from '../assets/prosimg/pros6.png';
 import imgAlgo from '../assets/prosimg/algo.png';
 
@@ -53,7 +53,7 @@ const projectsData = [
     {
         key: 'clock',
         img: imgClock,
-        stack: [<FaJava className="text-red-500" />],
+        stack: [<FaJava className="text-red-500" />, <FaCss3Alt className="text-blue-500" />],
         link: 'https://github.com/Darkness947/pro-clock',
         type: 'app'
     },

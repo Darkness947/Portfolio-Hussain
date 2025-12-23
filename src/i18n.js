@@ -85,7 +85,7 @@ const resources = {
           "desc": "A simple tool for students to calculate their GPA based on their grades. Built with React and Bootstrap."
         },
         "clock": {
-          "title": "High Resolution Clock",
+          "title": "Pro Clock",
           "desc": "A precision digital clock application displaying micro & nano seconds. Developed with Java & JavaFX."
         },
         "todo": {
@@ -225,7 +225,7 @@ const resources = {
           "desc": "أداة بسيطة للطلاب لحساب معدلهم التراكمي بناءً على درجاتهم."
         },
         "clock": {
-          "title": "ساعة عالية الدقة",
+          "title": "Pro Clock",
           "desc": "ساعة رقمية دقيقة تعرض أجزاء الميكرو والنانو ثانية. طورت باستخدام Java & JavaFX."
         },
         "todo": {
