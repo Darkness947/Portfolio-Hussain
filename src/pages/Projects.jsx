@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { FaSteam, FaGithub, FaExternalLinkAlt, FaUnity, FaReact, FaJava, FaNodeJs, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
-import { SiMongodb, SiBootstrap, SiTailwindcss, SiVite, SiNextdotjs, SiTypescript } from "react-icons/si";
+import { SiMongodb, SiBootstrap, SiTailwindcss, SiVite, SiNextdotjs, SiTypescript, SiExpress } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 
 import imgDarkness from '../assets/prosimg/pros2.png';
@@ -22,10 +22,10 @@ const projectsData = [
         pos: 'object-center'
     },
     {
-        key: 'schedule',
-        img: imgSchedule,
-        stack: [<FaHtml5 className="text-orange-500" />, <FaCss3Alt className="text-blue-500" />, <FaJs className="text-yellow-400" />],
-        link: 'https://github.com/Darkness947/schedule-maker',
+        key: 'todo',
+        img: imgTodo,
+        stack: [<SiMongodb className="text-green-500" />, <SiExpress className="text-white" />, <FaReact className="text-cyan-400" />, <FaNodeJs className="text-green-600" />],
+        link: 'https://to-do-list-dev8.netlify.app',
         type: 'web'
     },
     {
@@ -58,10 +58,10 @@ const projectsData = [
         type: 'app'
     },
     {
-        key: 'todo',
-        img: imgTodo,
-        stack: [<SiMongodb className="text-green-500" />, <FaNodeJs className="text-green-600" />, <FaReact className="text-cyan-400" />],
-        link: 'https://to-do-list-dev8.netlify.app',
+        key: 'schedule',
+        img: imgSchedule,
+        stack: [<FaHtml5 className="text-orange-500" />, <FaCss3Alt className="text-blue-500" />, <FaJs className="text-yellow-400" />],
+        link: 'https://github.com/Darkness947/schedule-maker',
         type: 'web'
     }
 ];
