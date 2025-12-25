@@ -10,6 +10,7 @@ import imgDarkness from '../assets/prosimg/pros2.png';
 import imgPortfolio from '../assets/prosimg/portfolio-new.png';
 import imgSchedule from '../assets/prosimg/pros1.png';
 import imgAlgo from '../assets/prosimg/algo.png';
+import imgVigilante from '../assets/prosimg/vigilante.png';
 
 const techStack = [
     { icon: <FaJs className="text-yellow-400" />, name: "JavaScript" },
@@ -256,7 +257,7 @@ function About() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 perspective-1000">
                         {[
                             { img: imgDarkness, title: "Darkness Takeover", color: "from-purple-600 to-black" },
-                            { img: imgPortfolio, title: "Portfolio 2026", color: "from-cyan-500 to-blue-600" },
+                            { img: imgVigilante, title: "Vigilante AI", color: "from-cyan-500 to-blue-600" },
                             { img: imgAlgo, title: "Algorithm Visualizer", color: "from-indigo-500 to-blue-500" }
                         ].map((item, idx) => (
                             <motion.div

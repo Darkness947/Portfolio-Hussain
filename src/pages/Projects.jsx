@@ -11,6 +11,7 @@ import imgGpa from '../assets/prosimg/gpapro.png';
 import imgClock from '../assets/prosimg/pro-clock.png';
 import imgTodo from '../assets/prosimg/pros6.png';
 import imgAlgo from '../assets/prosimg/algo.png';
+import imgVigilante from '../assets/prosimg/vigilante.png';
 
 const projectsData = [
     {
@@ -22,10 +23,10 @@ const projectsData = [
         pos: 'object-center'
     },
     {
-        key: 'todo',
-        img: imgTodo,
-        stack: [<SiMongodb className="text-green-500" />, <SiExpress className="text-white" />, <FaReact className="text-cyan-400" />, <FaNodeJs className="text-green-600" />],
-        link: 'https://to-do-list-dev8.netlify.app',
+        key: 'vigilante',
+        img: imgVigilante,
+        stack: [<SiNextdotjs className="text-white" />, <SiTypescript className="text-blue-500" />, <SiMongodb className="text-green-500" />, <SiTailwindcss className="text-cyan-300" />],
+        link: 'https://vigilante-ai-assistant.vercel.app',
         type: 'web'
     },
     {
@@ -48,6 +49,13 @@ const projectsData = [
         img: imgGpa,
         stack: [<FaReact className="text-cyan-400" />, <SiBootstrap className="text-purple-500" />, <FaCss3Alt className="text-blue-500" />],
         link: 'https://gpa-calc-dev.netlify.app',
+        type: 'web'
+    },
+    {
+        key: 'todo',
+        img: imgTodo,
+        stack: [<SiMongodb className="text-green-500" />, <SiExpress className="text-white" />, <FaReact className="text-cyan-400" />, <FaNodeJs className="text-green-600" />],
+        link: 'https://to-do-list-dev8.netlify.app',
         type: 'web'
     },
     {

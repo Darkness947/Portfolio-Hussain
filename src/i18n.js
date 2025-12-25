@@ -95,6 +95,10 @@ const resources = {
         "algo_visualizer": {
           "title": "Algorithm Visualizer",
           "desc": "Master complex algorithms through interactive, step-by-step visualizations. Explore Sorting, Searching, and Graph algorithms in a beautiful, modern interface."
+        },
+        "vigilante": {
+          "title": "Vigilante AI Assistant",
+          "desc": "An intelligent, secure, and lightning-fast AI assistant designed to amplify your productivity. Built with Next.js, TypeScript, and MongoDB."
         }
       },
       "certs": {
@@ -235,6 +239,10 @@ const resources = {
         "algo_visualizer": {
           "title": "مصور الخوارزميات",
           "desc": "أتقن الخوارزميات المعقدة من خلال تصورات تفاعلية خطوة بخطوة. استكشف خوارزميات الترتيب والبحث والرسوم البيانية في واجهة عصرية وجميلة."
+        },
+        "vigilante": {
+          "title": "المساعد الذكي Vigilante",
+          "desc": "مساعد ذكي، آمن، وسريع للغاية مصمم لزيادة إنتاجيتك. بني باستخدام Next.js، TypeScript، و MongoDB."
         }
       },
       "certs": {
