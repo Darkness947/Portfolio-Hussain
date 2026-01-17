@@ -17,6 +17,9 @@ import cert12 from "../assets/carsimg/cars12.png";
 import cert13 from "../assets/carsimg/cars13.png";
 import cert14 from "../assets/carsimg/cars14.png";
 import cert15 from "../assets/carsimg/cars15.png";
+import cert16 from "../assets/carsimg/cars16.png";
+import cert17 from "../assets/carsimg/cars17.png";
+import cert18 from "../assets/carsimg/cars18.png";
 
 function Certifications() {
     const { t } = useTranslation();
@@ -37,6 +40,9 @@ function Certifications() {
         { key: 'it_essentials', img: cert13 },
         { key: 'sdaia_ai', img: cert14 },
         { key: 'sdaia_advanced_ai', img: cert15 },
+        { key: 'python_essentials_1', img: cert16 },
+        { key: 'python_essentials_2', img: cert17 },
+        { key: 'os_basics', img: cert18 },
     ];
 
     return (

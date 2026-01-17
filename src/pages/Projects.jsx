@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { FaSteam, FaGithub, FaExternalLinkAlt, FaUnity, FaReact, FaJava, FaNodeJs, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
+import { FaSteam, FaGithub, FaExternalLinkAlt, FaUnity, FaReact, FaJava, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaPython } from "react-icons/fa";
 import { SiMongodb, SiBootstrap, SiTailwindcss, SiVite, SiNextdotjs, SiTypescript, SiExpress } from "react-icons/si";
-import { TbBrandCSharp } from "react-icons/tb";
+import { TbBrandCSharp, TbSql } from "react-icons/tb";
 
 import imgDarkness from '../assets/prosimg/pros2.png';
 import imgSchedule from '../assets/prosimg/pros1.png';
@@ -12,6 +12,7 @@ import imgClock from '../assets/prosimg/pro-clock.png';
 import imgTodo from '../assets/prosimg/pros6.png';
 import imgAlgo from '../assets/prosimg/algo.png';
 import imgVigilante from '../assets/prosimg/vigilante.png';
+import imgVigilanteCrawler from '../assets/prosimg/vigilante_crawler.png';
 
 const projectsData = [
     {
@@ -28,6 +29,15 @@ const projectsData = [
         stack: [<SiNextdotjs className="text-white" />, <SiTypescript className="text-blue-500" />, <SiMongodb className="text-green-500" />, <SiTailwindcss className="text-cyan-300" />],
         link: 'https://vigilante-ai-assistant.vercel.app',
         type: 'web'
+    },
+    {
+        key: 'vigilante_crawler',
+        img: imgVigilanteCrawler,
+        stack: [<FaPython className="text-yellow-300" />, <TbSql className="text-orange-500" />, <FaHtml5 className="text-orange-500" />, <FaCss3Alt className="text-blue-500" />, <FaJs className="text-yellow-400" />],
+        link: 'https://github.com/Darkness947/Web-Crawler',
+        type: 'bot',
+        pos: 'object-center bg-gray-900',
+        fit: 'object-contain'
     },
     {
         key: 'algo_visualizer',
@@ -104,7 +114,7 @@ function Projects() {
                             <img
                                 src={project.img}
                                 alt={t(`projects.${project.key}.title`)}
-                                className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${project.pos || 'object-top'}`}
+                                className={`w-full h-full ${project.fit || 'object-cover'} transition-transform duration-700 group-hover:scale-110 ${project.pos || 'object-top'}`}
                             />
                             {/* Overlay Badge for Type */}
                             <div className="absolute top-3 right-3 z-20">

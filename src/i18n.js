@@ -99,6 +99,10 @@ const resources = {
         "vigilante": {
           "title": "Vigilante AI Assistant",
           "desc": "An intelligent, secure, and lightning-fast AI assistant designed to amplify your productivity. Built with Next.js, TypeScript, and MongoDB."
+        },
+        "vigilante_crawler": {
+          "title": "Vigilante Web Crawler",
+          "desc": "An autonomous web indexer and crawler system. Built with Python, SQL, and Web Technologies."
         }
       },
       "certs": {
@@ -116,7 +120,10 @@ const resources = {
         "hardware": { "title": "Computer Hardware Basics", "desc": "A course that covers the fundamentals of computer hardware, including components, assembly, and troubleshooting techniques." },
         "it_essentials": { "title": "IT Essentials 7", "desc": "Fundamental computer and career skills for entry-level IT jobs, covering hardware, software, and networking." },
         "sdaia_ai": { "title": "Fundamentals of AI", "desc": "A foundational course by SDAIA covering the core concepts of Artificial Intelligence, its applications, and future impact." },
-        "sdaia_advanced_ai": { "title": "Advanced AI Concepts", "desc": "An advanced course by SDAIA exploring deep learning, neural networks, and real-world AI implementation strategies." }
+        "sdaia_advanced_ai": { "title": "Advanced AI Concepts", "desc": "An advanced course by SDAIA exploring deep learning, neural networks, and real-world AI implementation strategies." },
+        "python_essentials_1": { "title": "Python Essentials 1", "desc": "Foundational Python skills including syntax, data types, and control flow." },
+        "python_essentials_2": { "title": "Python Essentials 2", "desc": "Advanced Python concepts: modules, packages, and object-oriented programming." },
+        "os_basics": { "title": "Operating Systems Basics", "desc": "Core concepts of operating systems, file management, and virtualization." }
       },
       "contact": {
         "send_email": "Send Email",
@@ -243,6 +250,10 @@ const resources = {
         "vigilante": {
           "title": "المساعد الذكي Vigilante",
           "desc": "مساعد ذكي، آمن، وسريع للغاية مصمم لزيادة إنتاجيتك. بني باستخدام Next.js، TypeScript، و MongoDB."
+        },
+        "vigilante_crawler": {
+          "title": "زاحف الويب Vigilante",
+          "desc": "نظام زاحف ومفهرس ويب مستقل. تم بناؤه باستخدام Python و SQL وتقنيات الويب."
         }
       },
       "certs": {
@@ -260,7 +271,10 @@ const resources = {
         "hardware": { "title": "Computer Hardware Basics", "desc": "دورة تغطي أساسيات عتاد الحاسوب، بما في ذلك المكونات، التجميع، وتقنيات استكشاف الأخطاء وإصلاحها." },
         "it_essentials": { "title": "IT Essentials 7", "desc": "مهارات الحاسوب والمسار الوظيفي الأساسية لوظائف تكنولوجيا المعلومات للمبتدئين، تغطي الأجهزة والبرمجيات والشبكات." },
         "sdaia_ai": { "title": "مبادئ الذكاء الاصطناعي", "desc": "دورة تأسيسية من سدايا تغطي المفاهيم الأساسية للذكاء الاصطناعي، تطبيقاته، وأثره المستقبلي." },
-        "sdaia_advanced_ai": { "title": "مفاهيم الذكاء الاصطناعي المتقدمة", "desc": "دورة متقدمة من سدايا تستكشف التعلم العميق، الشبكات العصبية، واستراتيجيات تطبيق الذكاء الاصطناعي في العالم الحقيقي." }
+        "sdaia_advanced_ai": { "title": "مفاهيم الذكاء الاصطناعي المتقدمة", "desc": "دورة متقدمة من سدايا تستكشف التعلم العميق، الشبكات العصبية، واستراتيجيات تطبيق الذكاء الاصطناعي في العالم الحقيقي." },
+        "python_essentials_1": { "title": "أساسيات بايثون 1", "desc": "مهارات بايثون التأسيسية بما في ذلك النحو، أنواع البيانات، والتحكم في التدفق." },
+        "python_essentials_2": { "title": "أساسيات بايثون 2", "desc": "مفاهيم بايثون المتقدمة: الوحدات، الحزم، والبرمجة كائنية التوجه." },
+        "os_basics": { "title": "أساسيات أنظمة التشغيل", "desc": "المفاهيم الأساسية لأنظمة التشغيل، إدارة الملفات، والافتراضية." }
       },
       "contact": {
         "send_email": "أرسل بريد الكتروني",
